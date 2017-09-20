@@ -1,16 +1,20 @@
 ## Overview
 
-Base project folder for a SilverStripe ([http://silverstripe.org](http://silverstripe.org)) installation. Requires additional modules to function:
-
- * [`framework`](http://github.com/silverstripe/silverstripe-framework): Module including the base framework
- * [`cms`](http://github.com/silverstripe/silverstripe-cms): Module including a Content Management System
- * [`siteconfig`](http://github.com/silverstripe/silverstripe-siteconfig): Module providing a Settings tab in the admin section allowing users to set site wide global configuration.
- * `themes/simple` (optional)
+Getting [Silverstripe 4](http://doc.silverstripe.org/framework/en/installation/),
+[react-create-app](http://doc.silverstripe.org/framework/en/installation/),
+and [webpack3](https://webpack.js.org/) to play nice
 
 ## Installation ##
 
-See [installation on different platforms](http://doc.silverstripe.org/framework/en/installation/),
-and [installation from source](http://doc.silverstripe.org/framework/en/installation/from-source).
+* git clone[https://github.com/dunatron/react-add-form.git](https://github.com/dunatron/react-add-form.git)
+* composer install 
+
+## Build Scripts ##
+* yarn install 
+* yarn run build:dev
+* yarn add webpack -g
+* yarn webpack 
+
 
 ## Bugtracker ##
 
