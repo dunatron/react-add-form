@@ -48,7 +48,7 @@ when you are done developing your feature you need to push your feature branch t
 
 * `git push origin HEAD` **OR** `git push origin feature/add-some-feature`
 
-You then need to[raise a pull request](https://github.com/dunatron/react-add-form/pulls) between your feature branch and the develop branch
+You then need to [raise a pull request](https://github.com/dunatron/react-add-form/pulls) between your feature branch and the develop branch
 
 **Merging to master branch**  
 
@@ -78,3 +78,6 @@ NOTE:
 md new line just end current line with 2 blank spaces  
   
 DO: create a new pull request when editing
+
+## ToDo ## 
+* update build scripts
