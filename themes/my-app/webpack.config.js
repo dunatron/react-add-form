@@ -5,7 +5,7 @@ var srcPath  = path.join(__dirname, '/src/'),
     distPath = path.join(__dirname, '/dist/');
 
 module.exports = {
-    watch: true,
+    watch: false,
     cache: true,
     context: srcPath,
     entry: {
@@ -17,6 +17,7 @@ module.exports = {
     },
     resolve: {
         modules: ["node_modules"],
+        extensions: ['.js', '.jsx'],
     },
     plugins: [
 
@@ -32,7 +33,8 @@ module.exports = {
                 exclude: [/node_modules/],
                 use: [{
                     loader: 'babel-loader',
-                    options: { presets: ['es2015', 'stage-2', 'react'] },
+                    // options not needed as babel-loader uses .babelrc file
+                    //options: { presets: ['es2015', 'stage-2', 'react'] },
                 }],
             },
             {
@@ -40,7 +42,8 @@ module.exports = {
                 exclude: [/node_modules/],
                 use: [{
                     loader: 'babel-loader',
-                    options: { presets: ['es2015', 'stage-2', 'react'] },
+                    // options not needed as babel-loader uses .babelrc file
+                    //options: { presets: ['es2015', 'stage-2', 'react'] },
                 }],
             },
             {
@@ -58,7 +61,8 @@ module.exports = {
             },
 
             // Loaders for other file types go here
-            { test: /\.(woff|woff2|ttf|eot|svg|gif|png)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
+            {
+                test: /\.(woff|woff2|ttf|eot|svg|gif|png)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
                 loader: 'url-loader?limit=100000&name=fonts/[name].[ext]',
             },
 
@@ -66,8 +70,6 @@ module.exports = {
 
 
         loaders: [
-
-
 
         ]
 
