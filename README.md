@@ -56,6 +56,7 @@ You then need to[raise a pull request](https://github.com/dunatron/react-add-for
 * `git checkout develop`
 * `git pull origin develop`
 * run `git fetch origin --tags` this will get all the current tags so you can tag the next release, the tag to use is next in the sequence
+* `git tag` will show all the current tags
 * next we switch to release branch `git checkout -b RELEASE/x.x.x`
 * `git add -A`
 * `git commit -m "RELEASE x.x.x"`
