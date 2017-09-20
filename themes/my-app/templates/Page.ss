@@ -22,23 +22,16 @@ Change it, enhance it and most importantly enjoy it!
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<% require themedCSS('reset') %>
-	<% require themedCSS('typography') %>
-	<% require themedCSS('form') %>
-	<% require themedCSS('layout') %>
-	<link rel="shortcut icon" href="themes/simple/images/favicon.ico" />
-</head>
-<body class="$ClassName<% if not $Menu(2) %> no-sidebar<% end_if %>" <% if $i18nScriptDirection %>dir="$i18nScriptDirection"<% end_if %>>
-<% include Header %>
-<div class="main" role="main">
-	<div class="inner typography line">
-		$Layout
-	</div>
-</div>
-<% include Footer %>
 
-<% require javascript('//code.jquery.com/jquery-1.7.2.min.js') %>
-<% require themedJavascript('script') %>
+</head>
+<body>
+<%-- REACT APP ROOT --%>
+<div id="root">
+
+</div>
+<%-- SilverStripe --%>
+$Layout
+
 
 </body>
 </html>
