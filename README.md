@@ -37,8 +37,7 @@ If you would like to make changes to the SilverStripe core codebase, we have an 
  * [License](./LICENSE)
  
 ## Release Process ##
-* `git pull origin master`
-* `git checkout develop`
+* `git checkout -b develop`
 * `git pull origin develop`
 
 This will bring your environment up to date with the `develop` branch.   
@@ -52,11 +51,25 @@ when you are done developing your feature you need to push your feature branch t
 You then need to[raise a pull request](https://github.com/dunatron/react-add-form/pulls) between your feature branch and the develop branch
 
 **Merging to master branch**  
-* `git checkout -b develop`
+
+
+* `git checkout develop`
 * `git pull origin develop`
 * run `git fetch origin --tags` this will get all the current tags so you can tag the next release, the tag to use is next in the sequence
-* next we switch to release branch `git checkout -b RELEASE x.x.x`
+* next we switch to release branch `git checkout -b RELEASE/x.x.x`
+* `git add -A`
+* `git commit -m "RELEASE x.x.x"`
+* git tag x.x.x
+* git push origin x.x.x
+* `git push origin HEAD` **OR** `git push origin RELEASE/x.x.x`
 * (NOTE check this) `git pull origin master` if this pull fails something has gone wrong
+
+**Once the release has been merged to master**  
+
+The develop branch will be behind by one commit so we need to bring the `develop` branch up to date with master
+* `git checkout develop`
+* `git pull origin master` 
+* `git push origin develop`
 
 ## Editing this doc ##
 NOTE:  
