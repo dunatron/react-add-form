@@ -35,3 +35,32 @@ If you would like to make changes to the SilverStripe core codebase, we have an 
  * [Forums](http://silverstripe.org/forums)
  * [Developer Mailinglist](https://groups.google.com/forum/#!forum/silverstripe-dev)
  * [License](./LICENSE)
+ 
+## Release Process ##
+* `git pull origin master`
+* `git checkout develop`
+* `git pull origin develop`
+
+This will bring your environment up to date with the `develop` branch.   
+You should then create a branch e.g `feature/add-some-feature`
+* `git checkout -b feature/add-some-feature`  
+
+when you are done developing your feature you need to push your feature branch to the repository and reaise a pull request
+
+* `git push origin HEAD` **OR** `git push origin feature/add-some-feature`
+
+You then need to[raise a pull request](https://github.com/dunatron/react-add-form/pulls) between your feature branch and the develop branch
+
+**Merging to master branch**  
+* `git checkout -b develop`
+* `git pull origin develop`
+* run `git fetch origin --tags` this will get all the current tags so you can tag the next release, the tag to use is next in the sequence
+* next we switch to release branch `git checkout -b RELEASE x.x.x`
+* (NOTE check this) `git pull origin master` if this pull fails something has gone wrong
+
+## Editing this doc ##
+NOTE:  
+
+md new line just end current line with 2 blank spaces  
+  
+DO: create a new pull request when editing
